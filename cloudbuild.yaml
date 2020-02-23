@@ -2,12 +2,12 @@ steps:
 - name: 'gcr.io/allpurpose-1513599929715/flutter_web'
   volumes:
           - name: 'vol1'
-            path: '/usr/local/website/'
+            path: 'build/web/'
 - name: 'gcr.io/allpurpose-1513599929715/firebase'
   args: [ 'deploy', '--token', '${_FIREBASETOKEN}']
   volumes:
           - name: 'vol1'
-            path: '/usr/local/website/'
+            path: 'build/web/'
 images:
  - 'gcr.io/allpurpose-1513599929715/flutter_web'
  - 'gcr.io/allpurpose-1513599929715/firebase'
