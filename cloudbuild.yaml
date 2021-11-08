@@ -1,5 +1,6 @@
 steps:
-- name: 'gcr.io/allpurpose-1513599929715/flutter_web'
+- name: 'cirrusci/flutter'
+  args: ['flutter', 'build', 'web', '--release']
 - name: 'gcr.io/allpurpose-1513599929715/firebase'
   args: [ 'deploy', '--token', '${_FIREBASETOKEN}']
 images:
